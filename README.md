@@ -1,3 +1,3 @@
 # My Personal Website
 
-[Link](https://ryhorowitz.github.io/my-personal-website/)
+[Click here to see Website](https://ryhorowitz.github.io/my-personal-website/)
