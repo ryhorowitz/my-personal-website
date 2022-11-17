@@ -4,6 +4,7 @@ body {
 
 header {
   background-color: rgb(171, 208, 240);
+  width: 80%;
 }
 
 header > h1 {
