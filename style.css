@@ -4,6 +4,7 @@ body {
 
 header {
   background-color: rgb(171, 208, 240);
+  justify-content: center;
   width: 80%;
 }
 
