@@ -7,22 +7,37 @@
 
 html,
 body,
-div{
-    margin: 0;
-    padding: 0;
+div {
+  margin: 0;
+  padding: 0;
 }
+
 body.main-container {
   background: rgb(110, 110, 160);
-
 }
 
 header {
   background-color: rgb(171, 208, 240);
   justify-content: center;
-  width: 80%;
 }
 
-header > h1 {
+header>h1 {
+  justify-content: center;
+  text-align: center;
+}
+
+div#main {
+  max-width: 1200px;
+  margin: 0 10%;
+  padding: 1em;
+}
+
+footer {
+  background-color: rgb(171, 208, 240);
+  justify-content: center;
+}
+
+footer>h3 {
   justify-content: center;
   text-align: center;
 }
