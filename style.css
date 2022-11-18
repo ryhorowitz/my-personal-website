@@ -1,8 +1,19 @@
-html {
-  background-color: white;
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: 0;
 }
-body {
+
+html,
+body,
+div{
+    margin: 0;
+    padding: 0;
+}
+body.main-container {
   background: rgb(110, 110, 160);
+
 }
 
 header {
