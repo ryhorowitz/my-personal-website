@@ -32,3 +32,22 @@ body {
 .sidenav a:hover {
   color: #f1f1f1;
 }
+
+.main {
+  margin-left: 160px;
+  margin-right: 100px;
+  padding: 0px 10px;
+}
+.main h1 {
+  margin: 1rem .5rem;
+}
+.main p {
+  margin: 1.5rem;
+}
+
+img#headshot {
+ float: right;
+ border-radius: 8px;
+ max-width: 20%;
+ margin-left: 1rem;
+}
