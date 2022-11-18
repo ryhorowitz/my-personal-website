@@ -26,9 +26,16 @@ header>h1 {
   text-align: center;
 }
 
+.sidebar {
+  width: 25%;
+  background-color: blanchedalmond;
+  padding: 3%;
+  height: 100%;
+}
 div#main {
   max-width: 1200px;
-  margin: 0 10%;
+  /* margin: 0 10% 0 25%; */
+  margin-left: 25%;
   padding: 1em;
 }
 
