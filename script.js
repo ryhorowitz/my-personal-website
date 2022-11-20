@@ -1,12 +1,13 @@
 const main = document.querySelector('div.main')
-const container = document.querySelector('.container')
+// const container = document.querySelector('.container')
 const homeLink = document.getElementById("home")
 const portfolioLink = document.getElementById("portfolio")
 const contactLink = document.getElementById("contact")// append contact info
 
 // on click div class container is removed
-function emptyContainer (cont) {
-  cont.remove()
+function emptyContainer () {
+  const container = document.querySelector('.container')
+  container.remove()
 }
 
 function generateContainer () {
@@ -25,8 +26,8 @@ function generatePortfolio () {
   return portfolio
 }
 
-function appendResume (cont) {
-  emptyContainer(cont)
+function appendResume () {
+  emptyContainer()
   const divContainer = generateContainer()
   const portfolio = generatePortfolio()
   
@@ -51,7 +52,7 @@ function generateBio() {
 }
 
 portfolioLink.addEventListener('click', e => {
-  appendResume(container)
+  appendResume()
 })
 
 contactLink.addEventListener('click', e => {
@@ -59,14 +60,14 @@ contactLink.addEventListener('click', e => {
 })
 
 homeLink.addEventListener('click', e => {
-  console.log('container', container)
-  emptyContainer(container)
+  emptyContainer() //THIS ISNT WORKING
 
   const divContainer = generateContainer()
   const headshot = generateHeadshot()
   const bio = generateBio()
-  // console.log('headshot', headshot)
-  // headshot.append(bio)
-  // main.append(headshot)
+  console.log('headshot', headshot)
+  main.append(divContainer)
+  divContainer.append(headshot)
+  divContainer.append(bio)
 })
 
