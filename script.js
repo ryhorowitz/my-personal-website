@@ -1,5 +1,4 @@
 const main = document.querySelector('div.main')
-// const container = document.querySelector('.container')
 const homeLink = document.getElementById("home")
 const portfolioLink = document.getElementById("portfolio")
 const contactLink = document.getElementById("contact")// append contact info
@@ -50,6 +49,41 @@ function generateBio() {
   bio.innerText = 'Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.'
   return bio
 }
+function returnToHome() {
+  emptyContainer()
+  const divContainer = generateContainer()
+  const headshot = generateHeadshot()
+  const bio = generateBio()
+
+  main.append(divContainer)
+  divContainer.append(headshot)
+  divContainer.append(bio)
+}
+
+function generateContactList() {
+  const list = document.createElement('ul')
+  const phoneNumberLi = document.createElement('li')
+  const emailLi = document.createElement('li')
+  const linkedInLi = document.createElement('li')
+  const githubLi = document.createElement('li')
+  const listArray = [phoneNumberLi, emailLi, linkedInLi, githubLi];
+
+  phoneNumberLi.innerText = '(800) 555-5555'
+  emailLi.innerText = 'ryanhorowitz@fake.com'
+  linkedInLi.innerText = 'www.linkedin.com/in/ryan-horowitz/'
+  githubLi.innerText = 'https://github.com/ryhorowitz'
+
+  listArray.forEach( elem => {
+    list.append(elem)
+  });
+  
+  console.log('list', list)
+  return list
+}
+
+homeLink.addEventListener('click', e => {
+  returnToHome()
+})
 
 portfolioLink.addEventListener('click', e => {
   appendResume()
@@ -57,17 +91,9 @@ portfolioLink.addEventListener('click', e => {
 
 contactLink.addEventListener('click', e => {
   console.log(`Contact link clicked`, e)
+  generateContactList()
 })
 
-homeLink.addEventListener('click', e => {
-  emptyContainer() //THIS ISNT WORKING
 
-  const divContainer = generateContainer()
-  const headshot = generateHeadshot()
-  const bio = generateBio()
-  console.log('headshot', headshot)
-  main.append(divContainer)
-  divContainer.append(headshot)
-  divContainer.append(bio)
-})
+
 
