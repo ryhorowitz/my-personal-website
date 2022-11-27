@@ -2,6 +2,7 @@ const main = document.querySelector('div.main')
 const homeLink = document.getElementById("home")
 const portfolioLink = document.getElementById("portfolio")
 const contactLink = document.getElementById("contact")// append contact info
+const template = document.getElementById("contact-template")
 
 // on click div class container is removed
 function emptyContainer () {
@@ -90,8 +91,15 @@ portfolioLink.addEventListener('click', e => {
 })
 
 contactLink.addEventListener('click', e => {
-  console.log(`Contact link clicked`, e)
-  generateContactList()
+  emptyContainer()
+  const divContainer = generateContainer()
+  const headshot = generateHeadshot()
+
+  main.append(divContainer)
+  divContainer.append(headshot)
+  const contactNode = template.content.cloneNode(true)
+  console.log(`contact node is ${contactNode}`)
+  divContainer.append(contactNode)
 })
 
 
