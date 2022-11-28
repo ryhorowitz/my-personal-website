@@ -41,7 +41,11 @@ body {
 .main h1 {
   margin: 2vh 1vw;
 }
-.main p {
+.main .bio {
+  margin: 4vw;
+}
+
+.main .contact {
   margin: 4vw;
 }
 
@@ -51,3 +55,12 @@ img#headshot {
  max-width: 200px;
  margin-left: 1rem;
 }
+
+.contact-list-item p {
+  display: inline;
+  margin-left: 2vw;
+}
+
+/* h4 {
+  display: inline;
+} */

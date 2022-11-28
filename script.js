@@ -50,6 +50,7 @@ function generateBio() {
   bio.innerText = 'Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.'
   return bio
 }
+
 function returnToHome() {
   emptyContainer()
   const divContainer = generateContainer()
@@ -82,15 +83,7 @@ function generateContactList() {
   return list
 }
 
-homeLink.addEventListener('click', e => {
-  returnToHome()
-})
-
-portfolioLink.addEventListener('click', e => {
-  appendResume()
-})
-
-contactLink.addEventListener('click', e => {
+function showContactList() {
   emptyContainer()
   const divContainer = generateContainer()
   const headshot = generateHeadshot()
@@ -100,6 +93,20 @@ contactLink.addEventListener('click', e => {
   const contactNode = template.content.cloneNode(true)
   console.log(`contact node is ${contactNode}`)
   divContainer.append(contactNode)
+}
+
+
+// Click Handlers
+homeLink.addEventListener('click', e => {
+  returnToHome()
+})
+
+portfolioLink.addEventListener('click', e => {
+  appendResume()
+})
+
+contactLink.addEventListener('click', e => {
+  showContactList()
 })
 
 
