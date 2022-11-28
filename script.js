@@ -2,6 +2,7 @@ const main = document.querySelector('div.main')
 const homeLink = document.getElementById("home")
 const portfolioLink = document.getElementById("portfolio")
 const contactLink = document.getElementById("contact")// append contact info
+//re name to templateTable
 const template = document.getElementById("contact-template")
 
 // on click div class container is removed
