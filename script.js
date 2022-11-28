@@ -63,27 +63,6 @@ function returnToHome() {
   divContainer.append(bio)
 }
 
-function generateContactList() {
-  const list = document.createElement('ul')
-  const phoneNumberLi = document.createElement('li')
-  const emailLi = document.createElement('li')
-  const linkedInLi = document.createElement('li')
-  const githubLi = document.createElement('li')
-  const listArray = [phoneNumberLi, emailLi, linkedInLi, githubLi];
-
-  phoneNumberLi.innerText = '(800) 555-5555'
-  emailLi.innerText = 'ryanhorowitz@fake.com'
-  linkedInLi.innerText = 'www.linkedin.com/in/ryan-horowitz/'
-  githubLi.innerText = 'https://github.com/ryhorowitz'
-
-  listArray.forEach( elem => {
-    list.append(elem)
-  });
-  
-  console.log('list', list)
-  return list
-}
-
 function showContactList() {
   emptyContainer()
   const divContainer = generateContainer()
@@ -95,7 +74,6 @@ function showContactList() {
   console.log(`contact node is ${contactNode}`)
   divContainer.append(contactNode)
 }
-
 
 // Click Handlers
 homeLink.addEventListener('click', e => {
@@ -109,7 +87,3 @@ portfolioLink.addEventListener('click', e => {
 contactLink.addEventListener('click', e => {
   showContactList()
 })
-
-
-
-
